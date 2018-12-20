@@ -7,7 +7,7 @@ html {
 }
 
 body {
-  font-family: 'Merriweather', serif;
+  font-family: 'Merriweather', serif, sans-serif;
 }
 
 p {
@@ -26,6 +26,12 @@ p {
   max-width: 900px;
   margin: 0 auto;
   padding: 10px;
+}
+
+.form-control {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
 }
 
 
@@ -49,11 +55,14 @@ HR
   border: 0;
   height: 1px;
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+  margin-bottom: 1.5rem;
 }
 
 .double-bar {
   border: 0;
+  width: 95%;
   border-top: 3px double #8c8c8c;
+  margin-bottom: 1.5rem;
 }
 
 
@@ -145,6 +154,18 @@ header,
   text-align: center;
 }
 
+fieldset {
+  border: 0;
+}
+
+legend {
+  font-size: 1.2rem;
+  font-weight: bold;
+  display: inline-block;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
 label {
   display: inline-block;
   font-weight: 300;
@@ -186,6 +207,10 @@ textarea {
     border: 1px solid rgb(40, 53, 95);
   }
 
+  select {
+    color: lightslategray;
+  }
+
   textarea {
     padding: 50px;
   }
@@ -213,23 +238,26 @@ button {
   font-style: italic;
 }
 
-
-
 /*==========================
 ====== MEDIA QUERIES ======= 
 ==========================*/
-@media screen and (min-width: 768px) {
+@media (min-width: 768px) {
 
   .header-title {
     min-width: 100%;
   }
 
-  input[type="text"],
-  input[type="email"],
-  input[type="number"],
-  select {
-    display: inline-block; 
+  .form-control {
+    flex-direction: row;
   }
 
+  .form-control label {
+    min-width: 200px;
+  }
+
+  label,
+  input {
+    align-self: center;
+  }
 }
 

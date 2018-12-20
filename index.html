@@ -8,7 +8,6 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <link href="https://fonts.googleapis.com/css?family=Merriweather:300,400,700" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" integrity="sha384-gfdkjb5BdAXd+lj+gudLWI+BXq4IuLW5IT+brZEZsLFm++aCMlF1V92rMkPaX4PP" crossorigin="anonymous">
   <title>Contact Form</title>
 </head>
 <body>
@@ -35,87 +34,101 @@
 
   <!-- CONTACT FORM -->
   <div class="container">
-    <h2>Contact Information</h2>
-    <form action="#" method="#" class="input-group">
-      <!-- Full Name -->
-      <label for="name">Full Name</label><br>
-      <input type="text" name="name" id="name" placeholder="Required" required>
-      <!-- Email -->
-      <label for="email">Email Address</label><br>
-      <input type="email" name="email" id="email" placeholder="Required" required>
-      <!-- Phone Number -->
-      <label for="phone">Phone Number</label><br>
-      <input type="number" name="phone" id="phone" required>
-      <!-- Street Address -->
-      <label for="address">Street Address</label><br>
-      <input type="text" name="address" id="address" required>
-      <!-- City -->
-      <label for="city">City</label><br>
-      <input type="text" name="city" id="city" required>
-      <!-- State -->
-      <label for="state">State</label><br>
-      <select value="city">
-        <option name="choose" id="city" selected="selected">Choose State</option>
-        <option name="toronto" id="city">Toronto</option>
-        <option name="san-francisco" id="city">San Francisco</option>
-        <option name="new-york" id="city">New York</option>
-      </select>
-      <!-- Zip Code -->
-      <label for="zip-code">Zip Code</label><br>
-      <input type="text" pattern="[0-9]{5}" maxlength="6" name="zip-code" id="zip-code"  required>
+    <form action="#" method="#">
+      <fieldset>
+        <legend>Contact Information</legend>
+        <!-- Full Name -->
+        <div class="form-control">
+          <label for="name">Full Name</label><br>
+          <input type="text" name="name" id="name" placeholder="Required" required>
+        </div>
+        <!-- Email -->
+        <div class="form-control">
+          <label for="email">Email Address</label><br>
+          <input type="email" name="email" id="email" placeholder="Required" required>
+        </div>
+        <!-- Phone Number -->
+        <div class="form-control">
+          <label for="phone">Phone Number</label><br>
+          <input type="number" name="phone" id="phone" required>
+        </div>
+        <!-- Street Address -->
+        <div class="form-control">
+          <label for="address">Street Address</label><br>
+          <input type="text" name="address" id="address" required>
+        </div>
+        <!-- City -->
+        <div class="form-control">
+          <label for="city">City</label><br>
+          <input type="text" name="city" id="city" required>
+        </div>
+        <!-- State -->
+        <div class="form-control">
+          <label for="state">State</label><br>
+          <select for="city" value="city">
+            <option name="choose" id="city" selected="selected">Choose State</option>
+            <option name="toronto" id="city">Toronto</option>
+            <option name="san-francisco" id="city">San Francisco</option>
+            <option name="new-york" id="city">New York</option>
+          </select>
+        </div>
+        <!-- Zip Code -->
+        <div class="form-control">
+          <label for="zip-code">Zip Code</label><br>
+          <input type="text" pattern="[0-9]{5}" maxlength="6" name="zip-code" id="zip-code"  required>
+        </div>
+      </fieldset>
+
+      <!-- second bar -->
+      <div class="container">
+        <hr class="double-bar">
+      </div>
+
+      <!-- NEWSLETTER -->
+      <fieldset>
+        <legend>Newsletter</legend>
+        <section>
+          <p>Select the newsletters you would like to receive</p>
+          <!-- HTML News -->
+          <input type="checkbox" class="form-checkbox" name="html-news" id="html-news">
+          <label for="html-news">HTML News</label><br>
+
+          <!-- CSS News -->
+          <input type="checkbox" class="form-checkbox" name="css-news" id="css-news">
+          <label for="css-news">CSS News</label><br>
+
+          <!-- JavaScript News -->
+          <input type="checkbox" class="form-checkbox" name="js-news" id="js-news">
+          <label for="js-news">JavaScript News</label>
+
+          <h3>Newsletter format</h3>
+          <!-- HTML format -->
+          <input type="radio" class="form-radio" name="format" id="html-format">
+          <label for="html-format">HTML</label><br>
+          <!-- Plain Text format -->
+          <input type="radio" class="form-radio" name="format" id="plain-text-format">
+          <label for="plain-text-format">Plain text</label><br>
+
+          <label class="message">Other topics you would like to hear about</label>
+          <textarea name="message" id="message"></textarea>
+        </section>
+      </fieldset>
+
+      <!-- BUTTON SIGN UP -->
+      <section class="button-signup">
+        <div class="container">
+          <button>Sign Up</button>
+        </div>
+      </section>
+
+      <!-- FOOTER -->
+      <section class="copy">
+        <div class="container">
+          <p>Copyright The Code Review</p>
+          <p>Made with ❤️ in Toronto by Lucas Mendonca</p>
+        </div>
+      </section>
     </form>
   </div>
-
-  <!-- second bar -->
-  <div class="container">
-    <hr class="double-bar">
-  </div>
-
-  <!-- NEWSLETTER -->
-  <div class="container">
-    <section>
-      <h2>Newsletter</h2>
-
-      <p>Select the newsletters you would like to receive</p>
-      <!-- HTML News -->
-      <input type="checkbox" class="form-checkbox" name="html-news" id="html-news">
-      <label for="html-news">HTML News</label><br>
-
-      <!-- CSS News -->
-      <input type="checkbox" class="form-checkbox" name="css-news" id="css-news">
-      <label for="css-news">CSS News</label><br>
-
-      <!-- JavaScript News -->
-      <input type="checkbox" class="form-checkbox" name="js-news" id="js-news">
-      <label for="js-news">JavaScript News</label>
-
-      <h3>Newsletter format</h3>
-      <!-- HTML format -->
-      <input type="radio" class="form-radio" name="format" id="html-format">
-      <label for="html-format">HTML</label><br>
-      <!-- Plain Text format -->
-      <input type="radio" class="form-radio" name="format" id="plain-text-format">
-      <label for="plain-text-format">Plain text</label><br>
-
-      <label class="message">Other topics you would like to hear about</label>
-      <textarea name="message" id="message"></textarea>
-    </section>
-  </div>
-
-  <!-- BUTTON SIGN UP -->
-  <section class="button-signup">
-    <div class="container">
-      <button>Sign Up</button>
-    </div>
-  </section>
-
-  <!-- FOOTER -->
-  <section class="copy">
-    <div class="container">
-      <p>Copyright The Code Review</p>
-      <p>Made with ❤️ in London by Lucas</p>
-    </div>
-  </section>  
-
 </body>
 </html>

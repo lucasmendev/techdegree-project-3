@@ -50,7 +50,7 @@
         <!-- Phone Number -->
         <div class="form-control">
           <label for="phone">Phone Number</label><br>
-          <input type="number" name="phone" id="phone" required>
+          <input type="tel" name="phone" id="phone" required>
         </div>
         <!-- Street Address -->
         <div class="form-control">
@@ -65,11 +65,11 @@
         <!-- State -->
         <div class="form-control">
           <label for="state">State</label><br>
-          <select for="city" value="city">
-            <option name="choose" id="city" selected="selected">Choose State</option>
-            <option name="toronto" id="city">Toronto</option>
-            <option name="san-francisco" id="city">San Francisco</option>
-            <option name="new-york" id="city">New York</option>
+          <select id="state" name="state">
+            <option id="state-choose" selected="selected">Choose State</option>
+            <option id="state-to">Toronto</option>
+            <option id="state-sf">San Francisco</option>
+            <option id="state-ny">New York</option>
           </select>
         </div>
         <!-- Zip Code -->
@@ -109,7 +109,7 @@
           <input type="radio" class="form-radio" name="format" id="plain-text-format">
           <label for="plain-text-format">Plain text</label><br>
 
-          <label class="message">Other topics you would like to hear about</label>
+          <label for="message" class="message">Other topics you would like to hear about</label>
           <textarea name="message" id="message"></textarea>
         </section>
       </fieldset>

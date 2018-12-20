@@ -150,7 +150,7 @@ BASIC STYLES
 
 header,
 .description,
-.copy {
+.copyright {
   text-align: center;
 }
 
@@ -232,7 +232,7 @@ button {
   margin: 2rem 0;
 }
 
-.copy {
+.copyright {
   font-weight: 300;
   color: lightslategrey;
   font-style: italic;
